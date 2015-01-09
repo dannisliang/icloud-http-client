@@ -1,9 +1,5 @@
 'use strict';
 
-var BASE_URL = 'https://www.icloud.com',
-    USER_AGENT =
-    'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0';
-
 // Handle request
 function request(options, callback) {
     var hyperquest = require('hyperquest'), util = require('util');
@@ -38,7 +34,7 @@ function request(options, callback) {
         // Add any cookies to collection
         if(res && res.headers['set-cookie']) {
             cookies.push(res.headers['set-cookie']);
-            delete res.headers['set-cookie'];
+            //delete res.headers['set-cookie'];
         }
     });
 
@@ -63,12 +59,12 @@ exports.post = function(options, callback) {
 
 // Specific origin
 exports.origin = function() {
-    return BASE_URL;
+    return 'https://www.icloud.com';
 };
 
 // Custom agent
 exports.userAgent = function() {
-    return USER_AGENT;
+    return 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0';
 };
 
 // TODO: Add more mime types
