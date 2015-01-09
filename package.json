@@ -1,0 +1,14 @@
+{
+  "name": "icloud-http-client",
+  "version": "1.0.0",
+  "description": "Minimal http client for use on icloud-session",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alexlincoln",
+  "license": "MIT",
+  "dependencies": {
+    "hyperquest": "^1.0.1"
+  }
+}
